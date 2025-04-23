@@ -1,6 +1,7 @@
 ## Deploying One Server
-In this example i created a web server on AWS  and used the user_data to start the HTTP service and to retrun a very simple html page when it is accessed also allowed the connectivity to port 8080 to access the webserver from outside 
-Note: the server is created in default VPC and it is using public subnet however in real world scenario we would create this server in any  specific VPC and we would assign it ip from private subnet and create a proxy or a LB to pass trhe traffic to the server and to hide the identity of the server from outside as well ass lock the ports to allow only necessary ports needed for comunication to avoid any security risks.
+in this example i modified the code a little bit to more dynamic i used variables to set the server http port number in that way when we need to modify the server configuration specfically the port number we just change it in one place not in 3 places bu this way we avoid getting any manual error.
+also i added output block to return the pulic ip of the server bu that we can test the server after deploy and confirm that everything went as expected
+
 ## Pre-requisities
 * You must have Terraform installed
 * You must have AWS account Free tier is ok
